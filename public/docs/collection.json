@@ -1,0 +1,433 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "605e69f7-70b9-4b91-89b9-f46442202fc8",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "POST api\/login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"deborah20@example.org\",\"password\":\"}988}0qTCD!4>L|39\\\"?\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Legal cases endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the legal cases.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/cases",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/cases"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"type\":\"legalCase\",\"id\":213,\"attributes\":{\"id\":213,\"user_id\":197,\"status\":\"H\",\"title\":\"vero molestiae rem\",\"description\":\"Nisi distinctio odio molestias aut eveniet. Neque quaerat consequuntur eaque at odit totam. Illum dolor debitis quae blanditiis id. Vel dolore et numquam soluta autem.\",\"employee_id\":8,\"advisor_id\":44452642,\"reference_id\":7,\"address\":\"567 Klocko Haven\\nKaiaburgh, ND 51110\",\"metadata\":\"{\\\"author\\\": \\\"Baylee Wehner\\\"}\",\"created_at\":\"2024-06-21T09:51:44.000000Z\",\"updated_at\":\"2024-06-21T09:51:44.000000Z\"},\"links\":{\"self\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/cases\\\/213\"}},{\"type\":\"legalCase\",\"id\":214,\"attributes\":{\"id\":214,\"user_id\":198,\"status\":\"C\",\"title\":\"iusto vel praesentium\",\"description\":\"Hic laudantium illo non voluptatem. Voluptas aut hic ut et molestias. Nihil ab dolor id quod. Officiis et labore praesentium corrupti aut cupiditate dolores.\",\"employee_id\":834,\"advisor_id\":831,\"reference_id\":650705649,\"address\":\"30700 Domingo Circles\\nNew Oren, AZ 93308\",\"metadata\":\"{\\\"author\\\": \\\"Jayson Olson\\\"}\",\"created_at\":\"2024-06-21T09:51:44.000000Z\",\"updated_at\":\"2024-06-21T09:51:44.000000Z\"},\"links\":{\"self\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/cases\\\/214\"}}],\"links\":{\"first\":\"\\\/?page=1\",\"last\":\"\\\/?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"\\\/?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"\\\/\",\"per_page\":10,\"to\":2,\"total\":2}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created legal case in database.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/cases",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/cases"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"status\":\"recusandae\",\"title\":\"placeat\",\"description\":\"Facilis sunt voluptatem quia est et aut amet.\",\"employee_id\":16,\"advisor_id\":7,\"reference_id\":3,\"address\":9,\"metadata\":\"[\\\"ullam\\\",\\\"vero\\\"]\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"type\":\"legalCase\",\"id\":215,\"attributes\":{\"id\":215,\"user_id\":199,\"status\":\"H\",\"title\":\"omnis vel repellat\",\"description\":\"Voluptatem minus perspiciatis ipsam dignissimos sed dolorem optio. Repellendus sunt et est.\",\"employee_id\":8,\"advisor_id\":6,\"reference_id\":31,\"address\":\"85288 Myrtice Points\\nSouth Calista, AL 22329-8108\",\"metadata\":\"{\\\"author\\\": \\\"Lauretta Hessel\\\"}\",\"created_at\":\"2024-06-21T09:51:44.000000Z\",\"updated_at\":\"2024-06-21T09:51:44.000000Z\"},\"links\":{\"self\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/cases\\\/215\"}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/cases\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/cases\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the case."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"type\":\"legalCase\",\"id\":216,\"attributes\":{\"id\":216,\"user_id\":200,\"status\":\"H\",\"title\":\"culpa mollitia placeat\",\"description\":\"Eius et ea quasi quis id nesciunt. Minima et nesciunt qui sint aspernatur. Voluptate dolore officiis quidem nisi velit fugit.\",\"employee_id\":781160561,\"advisor_id\":371,\"reference_id\":3204114,\"address\":\"846 Thompson Alley Apt. 641\\nSchneiderland, NE 83852-2387\",\"metadata\":\"{\\\"author\\\": \\\"Shaniya Friesen\\\"}\",\"created_at\":\"2024-06-21T09:51:44.000000Z\",\"updated_at\":\"2024-06-21T09:51:44.000000Z\"},\"links\":{\"self\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/cases\\\/216\"}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified legal case in database.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/cases\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/cases\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the case."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"status\":\"et\",\"title\":\"autem\",\"description\":\"Vero in earum iure suscipit.\",\"employee_id\":18,\"advisor_id\":5,\"reference_id\":16,\"address\":9,\"metadata\":\"[\\\"voluptatem\\\",\\\"quia\\\"]\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"type\":\"legalCase\",\"id\":217,\"attributes\":{\"id\":217,\"user_id\":201,\"status\":\"A\",\"title\":\"soluta saepe facere\",\"description\":\"Temporibus amet consequatur quo quam. Repudiandae odit voluptates ut ut. Ea vel id facere adipisci explicabo rerum ullam. Voluptate enim commodi hic labore et.\",\"employee_id\":7952,\"advisor_id\":87,\"reference_id\":20,\"address\":\"9589 Antone Stream\\nLake Molliefurt, HI 61039-8123\",\"metadata\":\"{\\\"author\\\": \\\"Prof. Jarrod Block\\\"}\",\"created_at\":\"2024-06-21T09:51:44.000000Z\",\"updated_at\":\"2024-06-21T09:51:44.000000Z\"},\"links\":{\"self\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/cases\\\/217\"}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Remove the specified legal case from database.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/cases\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/cases\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the case."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "User endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "List all users resource",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"type\":\"user\",\"id\":193,\"attributes\":{\"name\":\"Prof. Gabe Bailey II\",\"email\":\"egutmann@example.com\",\"emailVerifiedAt\":\"2024-06-21T09:51:44.000000Z\",\"createdAt\":\"2024-06-21T09:51:44.000000Z\",\"updatedAt\":\"2024-06-21T09:51:44.000000Z\",\"cases\":[{\"type\":\"legalCase\",\"id\":211,\"attributes\":{\"id\":211,\"user_id\":193,\"status\":\"A\",\"title\":\"molestias excepturi enim\",\"description\":\"Vero saepe perferendis doloremque ea dolorem aut quis laudantium. Quia natus nisi a ratione omnis error. Eos ipsa commodi occaecati odio et a sed. Sint voluptatem maiores reiciendis nisi cum aut qui. Culpa est enim nihil et ea.\",\"employee_id\":1,\"advisor_id\":808608,\"reference_id\":561157932,\"address\":\"6237 Lind Mews\\nPort Dannie, NH 17854-5678\",\"metadata\":\"{\\\"author\\\": \\\"Dr. Declan Schmidt\\\"}\",\"created_at\":\"2024-06-21T09:51:44.000000Z\",\"updated_at\":\"2024-06-21T09:51:44.000000Z\"},\"links\":{\"self\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/cases\\\/211\"}}]},\"links\":{\"self\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/users\\\/193\"}},{\"type\":\"user\",\"id\":194,\"attributes\":{\"name\":\"Dr. Vilma Olson\",\"email\":\"kory.kemmer@example.net\",\"emailVerifiedAt\":\"2024-06-21T09:51:44.000000Z\",\"createdAt\":\"2024-06-21T09:51:44.000000Z\",\"updatedAt\":\"2024-06-21T09:51:44.000000Z\",\"cases\":[{\"type\":\"legalCase\",\"id\":212,\"attributes\":{\"id\":212,\"user_id\":194,\"status\":\"A\",\"title\":\"ea repellat tenetur\",\"description\":\"Totam rerum autem voluptas recusandae quod excepturi. At ipsum a alias est non.\",\"employee_id\":7527,\"advisor_id\":4,\"reference_id\":199411,\"address\":\"8066 Celine Cove Suite 156\\nLake Kelsie, NY 29353-2115\",\"metadata\":\"{\\\"author\\\": \\\"Darwin Wolff\\\"}\",\"created_at\":\"2024-06-21T09:51:44.000000Z\",\"updated_at\":\"2024-06-21T09:51:44.000000Z\"},\"links\":{\"self\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/cases\\\/212\"}}]},\"links\":{\"self\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/users\\\/194\"}}],\"links\":{\"first\":\"\\\/?page=1\",\"last\":\"\\\/?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"\\\/?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"\\\/\",\"per_page\":5,\"to\":2,\"total\":2}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get a user resource",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/users\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"type\":\"user\",\"id\":195,\"attributes\":{\"name\":\"Miss Alda Abbott\",\"email\":\"austen77@example.com\",\"emailVerifiedAt\":\"2024-06-21T09:51:44.000000Z\",\"createdAt\":\"2024-06-21T09:51:44.000000Z\",\"updatedAt\":\"2024-06-21T09:51:44.000000Z\"},\"links\":{\"self\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/users\\\/195\"}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update a User resource",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/users\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"kqpswlbmiyldakdht\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"type\":\"user\",\"id\":196,\"attributes\":{\"name\":\"Shanny Feil DVM\",\"email\":\"mauricio99@example.net\",\"emailVerifiedAt\":\"2024-06-21T09:51:44.000000Z\",\"createdAt\":\"2024-06-21T09:51:44.000000Z\",\"updatedAt\":\"2024-06-21T09:51:44.000000Z\"},\"links\":{\"self\":\"http:\\\/\\\/localhost\\\/api\\\/v1\\\/users\\\/196\"}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete a user resource",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/users\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "token",
+                "type": "string"
+            }
+        ]
+    }
+}

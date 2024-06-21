@@ -1,0 +1,1142 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Email address for the user. Must be a valid email address.'
+                  example: deborah20@example.org
+                password:
+                  type: string
+                  description: 'Password for the user.'
+                  example: '}988}0qTCD!4>L|39"?'
+              required:
+                - email
+                - password
+      security: []
+  /api/register:
+    post:
+      summary: ''
+      operationId: postApiRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+  /api/v1/cases:
+    get:
+      summary: 'Display a listing of the legal cases.'
+      operationId: displayAListingOfTheLegalCases
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      type: legalCase
+                      id: 213
+                      attributes:
+                        id: 213
+                        user_id: 197
+                        status: H
+                        title: 'vero molestiae rem'
+                        description: 'Nisi distinctio odio molestias aut eveniet. Neque quaerat consequuntur eaque at odit totam. Illum dolor debitis quae blanditiis id. Vel dolore et numquam soluta autem.'
+                        employee_id: 8
+                        advisor_id: 44452642
+                        reference_id: 7
+                        address: "567 Klocko Haven\nKaiaburgh, ND 51110"
+                        metadata: '{"author": "Baylee Wehner"}'
+                        created_at: '2024-06-21T09:51:44.000000Z'
+                        updated_at: '2024-06-21T09:51:44.000000Z'
+                      links:
+                        self: 'http://localhost/api/v1/cases/213'
+                    -
+                      type: legalCase
+                      id: 214
+                      attributes:
+                        id: 214
+                        user_id: 198
+                        status: C
+                        title: 'iusto vel praesentium'
+                        description: 'Hic laudantium illo non voluptatem. Voluptas aut hic ut et molestias. Nihil ab dolor id quod. Officiis et labore praesentium corrupti aut cupiditate dolores.'
+                        employee_id: 834
+                        advisor_id: 831
+                        reference_id: 650705649
+                        address: "30700 Domingo Circles\nNew Oren, AZ 93308"
+                        metadata: '{"author": "Jayson Olson"}'
+                        created_at: '2024-06-21T09:51:44.000000Z'
+                        updated_at: '2024-06-21T09:51:44.000000Z'
+                      links:
+                        self: 'http://localhost/api/v1/cases/214'
+                  links:
+                    first: '/?page=1'
+                    last: '/?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: '/?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: /
+                    per_page: 10
+                    to: 2
+                    total: 2
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        type: legalCase
+                        id: 213
+                        attributes:
+                          id: 213
+                          user_id: 197
+                          status: H
+                          title: 'vero molestiae rem'
+                          description: 'Nisi distinctio odio molestias aut eveniet. Neque quaerat consequuntur eaque at odit totam. Illum dolor debitis quae blanditiis id. Vel dolore et numquam soluta autem.'
+                          employee_id: 8
+                          advisor_id: 44452642
+                          reference_id: 7
+                          address: "567 Klocko Haven\nKaiaburgh, ND 51110"
+                          metadata: '{"author": "Baylee Wehner"}'
+                          created_at: '2024-06-21T09:51:44.000000Z'
+                          updated_at: '2024-06-21T09:51:44.000000Z'
+                        links:
+                          self: 'http://localhost/api/v1/cases/213'
+                      -
+                        type: legalCase
+                        id: 214
+                        attributes:
+                          id: 214
+                          user_id: 198
+                          status: C
+                          title: 'iusto vel praesentium'
+                          description: 'Hic laudantium illo non voluptatem. Voluptas aut hic ut et molestias. Nihil ab dolor id quod. Officiis et labore praesentium corrupti aut cupiditate dolores.'
+                          employee_id: 834
+                          advisor_id: 831
+                          reference_id: 650705649
+                          address: "30700 Domingo Circles\nNew Oren, AZ 93308"
+                          metadata: '{"author": "Jayson Olson"}'
+                          created_at: '2024-06-21T09:51:44.000000Z'
+                          updated_at: '2024-06-21T09:51:44.000000Z'
+                        links:
+                          self: 'http://localhost/api/v1/cases/214'
+                    items:
+                      type: object
+                      properties:
+                        type:
+                          type: string
+                          example: legalCase
+                        id:
+                          type: integer
+                          example: 213
+                        attributes:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 213
+                            user_id:
+                              type: integer
+                              example: 197
+                            status:
+                              type: string
+                              example: H
+                            title:
+                              type: string
+                              example: 'vero molestiae rem'
+                            description:
+                              type: string
+                              example: 'Nisi distinctio odio molestias aut eveniet. Neque quaerat consequuntur eaque at odit totam. Illum dolor debitis quae blanditiis id. Vel dolore et numquam soluta autem.'
+                            employee_id:
+                              type: integer
+                              example: 8
+                            advisor_id:
+                              type: integer
+                              example: 44452642
+                            reference_id:
+                              type: integer
+                              example: 7
+                            address:
+                              type: string
+                              example: "567 Klocko Haven\nKaiaburgh, ND 51110"
+                            metadata:
+                              type: string
+                              example: '{"author": "Baylee Wehner"}'
+                            created_at:
+                              type: string
+                              example: '2024-06-21T09:51:44.000000Z'
+                            updated_at:
+                              type: string
+                              example: '2024-06-21T09:51:44.000000Z'
+                        links:
+                          type: object
+                          properties:
+                            self:
+                              type: string
+                              example: 'http://localhost/api/v1/cases/213'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: '/?page=1'
+                      last:
+                        type: string
+                        example: '/?page=1'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: '/?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: /
+                      per_page:
+                        type: integer
+                        example: 10
+                      to:
+                        type: integer
+                        example: 2
+                      total:
+                        type: integer
+                        example: 2
+      tags:
+        - 'Legal cases endpoints'
+    post:
+      summary: 'Store a newly created legal case in database.'
+      operationId: storeANewlyCreatedLegalCaseInDatabase
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    type: legalCase
+                    id: 215
+                    attributes:
+                      id: 215
+                      user_id: 199
+                      status: H
+                      title: 'omnis vel repellat'
+                      description: 'Voluptatem minus perspiciatis ipsam dignissimos sed dolorem optio. Repellendus sunt et est.'
+                      employee_id: 8
+                      advisor_id: 6
+                      reference_id: 31
+                      address: "85288 Myrtice Points\nSouth Calista, AL 22329-8108"
+                      metadata: '{"author": "Lauretta Hessel"}'
+                      created_at: '2024-06-21T09:51:44.000000Z'
+                      updated_at: '2024-06-21T09:51:44.000000Z'
+                    links:
+                      self: 'http://localhost/api/v1/cases/215'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                        example: legalCase
+                      id:
+                        type: integer
+                        example: 215
+                      attributes:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 215
+                          user_id:
+                            type: integer
+                            example: 199
+                          status:
+                            type: string
+                            example: H
+                          title:
+                            type: string
+                            example: 'omnis vel repellat'
+                          description:
+                            type: string
+                            example: 'Voluptatem minus perspiciatis ipsam dignissimos sed dolorem optio. Repellendus sunt et est.'
+                          employee_id:
+                            type: integer
+                            example: 8
+                          advisor_id:
+                            type: integer
+                            example: 6
+                          reference_id:
+                            type: integer
+                            example: 31
+                          address:
+                            type: string
+                            example: "85288 Myrtice Points\nSouth Calista, AL 22329-8108"
+                          metadata:
+                            type: string
+                            example: '{"author": "Lauretta Hessel"}'
+                          created_at:
+                            type: string
+                            example: '2024-06-21T09:51:44.000000Z'
+                          updated_at:
+                            type: string
+                            example: '2024-06-21T09:51:44.000000Z'
+                      links:
+                        type: object
+                        properties:
+                          self:
+                            type: string
+                            example: 'http://localhost/api/v1/cases/215'
+      tags:
+        - 'Legal cases endpoints'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+                  description: 'status of the legal case.'
+                  example: recusandae
+                title:
+                  type: string
+                  description: 'title of the legal case.'
+                  example: placeat
+                description:
+                  type: string
+                  description: 'description of the legal case.'
+                  example: 'Facilis sunt voluptatem quia est et aut amet.'
+                employee_id:
+                  type: integer
+                  description: 'related employee_id for the legal case.'
+                  example: 16
+                advisor_id:
+                  type: integer
+                  description: 'related advisor_id for the legal case.'
+                  example: 7
+                reference_id:
+                  type: integer
+                  description: 'related reference_id for the legal case.'
+                  example: 3
+                address:
+                  type: integer
+                  description: 'address of the legal case.'
+                  example: 9
+                metadata:
+                  type: string
+                  description: 'metadata of the legal case. Must be a valid JSON string.'
+                  example: '["ullam","vero"]'
+              required:
+                - status
+                - title
+                - employee_id
+                - advisor_id
+                - reference_id
+  '/api/v1/cases/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    type: legalCase
+                    id: 216
+                    attributes:
+                      id: 216
+                      user_id: 200
+                      status: H
+                      title: 'culpa mollitia placeat'
+                      description: 'Eius et ea quasi quis id nesciunt. Minima et nesciunt qui sint aspernatur. Voluptate dolore officiis quidem nisi velit fugit.'
+                      employee_id: 781160561
+                      advisor_id: 371
+                      reference_id: 3204114
+                      address: "846 Thompson Alley Apt. 641\nSchneiderland, NE 83852-2387"
+                      metadata: '{"author": "Shaniya Friesen"}'
+                      created_at: '2024-06-21T09:51:44.000000Z'
+                      updated_at: '2024-06-21T09:51:44.000000Z'
+                    links:
+                      self: 'http://localhost/api/v1/cases/216'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                        example: legalCase
+                      id:
+                        type: integer
+                        example: 216
+                      attributes:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 216
+                          user_id:
+                            type: integer
+                            example: 200
+                          status:
+                            type: string
+                            example: H
+                          title:
+                            type: string
+                            example: 'culpa mollitia placeat'
+                          description:
+                            type: string
+                            example: 'Eius et ea quasi quis id nesciunt. Minima et nesciunt qui sint aspernatur. Voluptate dolore officiis quidem nisi velit fugit.'
+                          employee_id:
+                            type: integer
+                            example: 781160561
+                          advisor_id:
+                            type: integer
+                            example: 371
+                          reference_id:
+                            type: integer
+                            example: 3204114
+                          address:
+                            type: string
+                            example: "846 Thompson Alley Apt. 641\nSchneiderland, NE 83852-2387"
+                          metadata:
+                            type: string
+                            example: '{"author": "Shaniya Friesen"}'
+                          created_at:
+                            type: string
+                            example: '2024-06-21T09:51:44.000000Z'
+                          updated_at:
+                            type: string
+                            example: '2024-06-21T09:51:44.000000Z'
+                      links:
+                        type: object
+                        properties:
+                          self:
+                            type: string
+                            example: 'http://localhost/api/v1/cases/216'
+      tags:
+        - 'Legal cases endpoints'
+    put:
+      summary: 'Update the specified legal case in database.'
+      operationId: updateTheSpecifiedLegalCaseInDatabase
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    type: legalCase
+                    id: 217
+                    attributes:
+                      id: 217
+                      user_id: 201
+                      status: A
+                      title: 'soluta saepe facere'
+                      description: 'Temporibus amet consequatur quo quam. Repudiandae odit voluptates ut ut. Ea vel id facere adipisci explicabo rerum ullam. Voluptate enim commodi hic labore et.'
+                      employee_id: 7952
+                      advisor_id: 87
+                      reference_id: 20
+                      address: "9589 Antone Stream\nLake Molliefurt, HI 61039-8123"
+                      metadata: '{"author": "Prof. Jarrod Block"}'
+                      created_at: '2024-06-21T09:51:44.000000Z'
+                      updated_at: '2024-06-21T09:51:44.000000Z'
+                    links:
+                      self: 'http://localhost/api/v1/cases/217'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                        example: legalCase
+                      id:
+                        type: integer
+                        example: 217
+                      attributes:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 217
+                          user_id:
+                            type: integer
+                            example: 201
+                          status:
+                            type: string
+                            example: A
+                          title:
+                            type: string
+                            example: 'soluta saepe facere'
+                          description:
+                            type: string
+                            example: 'Temporibus amet consequatur quo quam. Repudiandae odit voluptates ut ut. Ea vel id facere adipisci explicabo rerum ullam. Voluptate enim commodi hic labore et.'
+                          employee_id:
+                            type: integer
+                            example: 7952
+                          advisor_id:
+                            type: integer
+                            example: 87
+                          reference_id:
+                            type: integer
+                            example: 20
+                          address:
+                            type: string
+                            example: "9589 Antone Stream\nLake Molliefurt, HI 61039-8123"
+                          metadata:
+                            type: string
+                            example: '{"author": "Prof. Jarrod Block"}'
+                          created_at:
+                            type: string
+                            example: '2024-06-21T09:51:44.000000Z'
+                          updated_at:
+                            type: string
+                            example: '2024-06-21T09:51:44.000000Z'
+                      links:
+                        type: object
+                        properties:
+                          self:
+                            type: string
+                            example: 'http://localhost/api/v1/cases/217'
+      tags:
+        - 'Legal cases endpoints'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+                  description: 'status of the legal case.'
+                  example: et
+                title:
+                  type: string
+                  description: 'title of the legal case.'
+                  example: autem
+                description:
+                  type: string
+                  description: 'description of the legal case.'
+                  example: 'Vero in earum iure suscipit.'
+                employee_id:
+                  type: integer
+                  description: 'related employee_id for the legal case.'
+                  example: 18
+                advisor_id:
+                  type: integer
+                  description: 'related advisor_id for the legal case.'
+                  example: 5
+                reference_id:
+                  type: integer
+                  description: 'related reference_id for the legal case.'
+                  example: 16
+                address:
+                  type: integer
+                  description: 'address of the legal case.'
+                  example: 9
+                metadata:
+                  type: string
+                  description: 'metadata of the legal case. Must be a valid JSON string.'
+                  example: '["voluptatem","quia"]'
+              required:
+                - status
+                - title
+                - employee_id
+                - advisor_id
+                - reference_id
+    delete:
+      summary: 'Remove the specified legal case from database.'
+      operationId: removeTheSpecifiedLegalCaseFromDatabase
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Legal cases endpoints'
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the case.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/v1/users:
+    get:
+      summary: 'List all users resource'
+      operationId: listAllUsersResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      type: user
+                      id: 193
+                      attributes:
+                        name: 'Prof. Gabe Bailey II'
+                        email: egutmann@example.com
+                        emailVerifiedAt: '2024-06-21T09:51:44.000000Z'
+                        createdAt: '2024-06-21T09:51:44.000000Z'
+                        updatedAt: '2024-06-21T09:51:44.000000Z'
+                        cases:
+                          -
+                            type: legalCase
+                            id: 211
+                            attributes:
+                              id: 211
+                              user_id: 193
+                              status: A
+                              title: 'molestias excepturi enim'
+                              description: 'Vero saepe perferendis doloremque ea dolorem aut quis laudantium. Quia natus nisi a ratione omnis error. Eos ipsa commodi occaecati odio et a sed. Sint voluptatem maiores reiciendis nisi cum aut qui. Culpa est enim nihil et ea.'
+                              employee_id: 1
+                              advisor_id: 808608
+                              reference_id: 561157932
+                              address: "6237 Lind Mews\nPort Dannie, NH 17854-5678"
+                              metadata: '{"author": "Dr. Declan Schmidt"}'
+                              created_at: '2024-06-21T09:51:44.000000Z'
+                              updated_at: '2024-06-21T09:51:44.000000Z'
+                            links:
+                              self: 'http://localhost/api/v1/cases/211'
+                      links:
+                        self: 'http://localhost/api/v1/users/193'
+                    -
+                      type: user
+                      id: 194
+                      attributes:
+                        name: 'Dr. Vilma Olson'
+                        email: kory.kemmer@example.net
+                        emailVerifiedAt: '2024-06-21T09:51:44.000000Z'
+                        createdAt: '2024-06-21T09:51:44.000000Z'
+                        updatedAt: '2024-06-21T09:51:44.000000Z'
+                        cases:
+                          -
+                            type: legalCase
+                            id: 212
+                            attributes:
+                              id: 212
+                              user_id: 194
+                              status: A
+                              title: 'ea repellat tenetur'
+                              description: 'Totam rerum autem voluptas recusandae quod excepturi. At ipsum a alias est non.'
+                              employee_id: 7527
+                              advisor_id: 4
+                              reference_id: 199411
+                              address: "8066 Celine Cove Suite 156\nLake Kelsie, NY 29353-2115"
+                              metadata: '{"author": "Darwin Wolff"}'
+                              created_at: '2024-06-21T09:51:44.000000Z'
+                              updated_at: '2024-06-21T09:51:44.000000Z'
+                            links:
+                              self: 'http://localhost/api/v1/cases/212'
+                      links:
+                        self: 'http://localhost/api/v1/users/194'
+                  links:
+                    first: '/?page=1'
+                    last: '/?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: '/?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: /
+                    per_page: 5
+                    to: 2
+                    total: 2
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        type: user
+                        id: 193
+                        attributes:
+                          name: 'Prof. Gabe Bailey II'
+                          email: egutmann@example.com
+                          emailVerifiedAt: '2024-06-21T09:51:44.000000Z'
+                          createdAt: '2024-06-21T09:51:44.000000Z'
+                          updatedAt: '2024-06-21T09:51:44.000000Z'
+                          cases:
+                            -
+                              type: legalCase
+                              id: 211
+                              attributes:
+                                id: 211
+                                user_id: 193
+                                status: A
+                                title: 'molestias excepturi enim'
+                                description: 'Vero saepe perferendis doloremque ea dolorem aut quis laudantium. Quia natus nisi a ratione omnis error. Eos ipsa commodi occaecati odio et a sed. Sint voluptatem maiores reiciendis nisi cum aut qui. Culpa est enim nihil et ea.'
+                                employee_id: 1
+                                advisor_id: 808608
+                                reference_id: 561157932
+                                address: "6237 Lind Mews\nPort Dannie, NH 17854-5678"
+                                metadata: '{"author": "Dr. Declan Schmidt"}'
+                                created_at: '2024-06-21T09:51:44.000000Z'
+                                updated_at: '2024-06-21T09:51:44.000000Z'
+                              links:
+                                self: 'http://localhost/api/v1/cases/211'
+                        links:
+                          self: 'http://localhost/api/v1/users/193'
+                      -
+                        type: user
+                        id: 194
+                        attributes:
+                          name: 'Dr. Vilma Olson'
+                          email: kory.kemmer@example.net
+                          emailVerifiedAt: '2024-06-21T09:51:44.000000Z'
+                          createdAt: '2024-06-21T09:51:44.000000Z'
+                          updatedAt: '2024-06-21T09:51:44.000000Z'
+                          cases:
+                            -
+                              type: legalCase
+                              id: 212
+                              attributes:
+                                id: 212
+                                user_id: 194
+                                status: A
+                                title: 'ea repellat tenetur'
+                                description: 'Totam rerum autem voluptas recusandae quod excepturi. At ipsum a alias est non.'
+                                employee_id: 7527
+                                advisor_id: 4
+                                reference_id: 199411
+                                address: "8066 Celine Cove Suite 156\nLake Kelsie, NY 29353-2115"
+                                metadata: '{"author": "Darwin Wolff"}'
+                                created_at: '2024-06-21T09:51:44.000000Z'
+                                updated_at: '2024-06-21T09:51:44.000000Z'
+                              links:
+                                self: 'http://localhost/api/v1/cases/212'
+                        links:
+                          self: 'http://localhost/api/v1/users/194'
+                    items:
+                      type: object
+                      properties:
+                        type:
+                          type: string
+                          example: user
+                        id:
+                          type: integer
+                          example: 193
+                        attributes:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                              example: 'Prof. Gabe Bailey II'
+                            email:
+                              type: string
+                              example: egutmann@example.com
+                            emailVerifiedAt:
+                              type: string
+                              example: '2024-06-21T09:51:44.000000Z'
+                            createdAt:
+                              type: string
+                              example: '2024-06-21T09:51:44.000000Z'
+                            updatedAt:
+                              type: string
+                              example: '2024-06-21T09:51:44.000000Z'
+                            cases:
+                              type: array
+                              example:
+                                -
+                                  type: legalCase
+                                  id: 211
+                                  attributes:
+                                    id: 211
+                                    user_id: 193
+                                    status: A
+                                    title: 'molestias excepturi enim'
+                                    description: 'Vero saepe perferendis doloremque ea dolorem aut quis laudantium. Quia natus nisi a ratione omnis error. Eos ipsa commodi occaecati odio et a sed. Sint voluptatem maiores reiciendis nisi cum aut qui. Culpa est enim nihil et ea.'
+                                    employee_id: 1
+                                    advisor_id: 808608
+                                    reference_id: 561157932
+                                    address: "6237 Lind Mews\nPort Dannie, NH 17854-5678"
+                                    metadata: '{"author": "Dr. Declan Schmidt"}'
+                                    created_at: '2024-06-21T09:51:44.000000Z'
+                                    updated_at: '2024-06-21T09:51:44.000000Z'
+                                  links:
+                                    self: 'http://localhost/api/v1/cases/211'
+                              items:
+                                type: object
+                                properties:
+                                  type:
+                                    type: string
+                                    example: legalCase
+                                  id:
+                                    type: integer
+                                    example: 211
+                                  attributes:
+                                    type: object
+                                    properties:
+                                      id: { type: integer, example: 211 }
+                                      user_id: { type: integer, example: 193 }
+                                      status: { type: string, example: A }
+                                      title: { type: string, example: 'molestias excepturi enim' }
+                                      description: { type: string, example: 'Vero saepe perferendis doloremque ea dolorem aut quis laudantium. Quia natus nisi a ratione omnis error. Eos ipsa commodi occaecati odio et a sed. Sint voluptatem maiores reiciendis nisi cum aut qui. Culpa est enim nihil et ea.' }
+                                      employee_id: { type: integer, example: 1 }
+                                      advisor_id: { type: integer, example: 808608 }
+                                      reference_id: { type: integer, example: 561157932 }
+                                      address: { type: string, example: "6237 Lind Mews\nPort Dannie, NH 17854-5678" }
+                                      metadata: { type: string, example: '{"author": "Dr. Declan Schmidt"}' }
+                                      created_at: { type: string, example: '2024-06-21T09:51:44.000000Z' }
+                                      updated_at: { type: string, example: '2024-06-21T09:51:44.000000Z' }
+                                  links:
+                                    type: object
+                                    properties:
+                                      self: { type: string, example: 'http://localhost/api/v1/cases/211' }
+                        links:
+                          type: object
+                          properties:
+                            self:
+                              type: string
+                              example: 'http://localhost/api/v1/users/193'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: '/?page=1'
+                      last:
+                        type: string
+                        example: '/?page=1'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: null
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: '/?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: /
+                      per_page:
+                        type: integer
+                        example: 5
+                      to:
+                        type: integer
+                        example: 2
+                      total:
+                        type: integer
+                        example: 2
+      tags:
+        - 'User endpoints'
+  '/api/v1/users/{id}':
+    get:
+      summary: 'Get a user resource'
+      operationId: getAUserResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    type: user
+                    id: 195
+                    attributes:
+                      name: 'Miss Alda Abbott'
+                      email: austen77@example.com
+                      emailVerifiedAt: '2024-06-21T09:51:44.000000Z'
+                      createdAt: '2024-06-21T09:51:44.000000Z'
+                      updatedAt: '2024-06-21T09:51:44.000000Z'
+                    links:
+                      self: 'http://localhost/api/v1/users/195'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                        example: user
+                      id:
+                        type: integer
+                        example: 195
+                      attributes:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                            example: 'Miss Alda Abbott'
+                          email:
+                            type: string
+                            example: austen77@example.com
+                          emailVerifiedAt:
+                            type: string
+                            example: '2024-06-21T09:51:44.000000Z'
+                          createdAt:
+                            type: string
+                            example: '2024-06-21T09:51:44.000000Z'
+                          updatedAt:
+                            type: string
+                            example: '2024-06-21T09:51:44.000000Z'
+                      links:
+                        type: object
+                        properties:
+                          self:
+                            type: string
+                            example: 'http://localhost/api/v1/users/195'
+      tags:
+        - 'User endpoints'
+    put:
+      summary: 'Update a User resource'
+      operationId: updateAUserResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    type: user
+                    id: 196
+                    attributes:
+                      name: 'Shanny Feil DVM'
+                      email: mauricio99@example.net
+                      emailVerifiedAt: '2024-06-21T09:51:44.000000Z'
+                      createdAt: '2024-06-21T09:51:44.000000Z'
+                      updatedAt: '2024-06-21T09:51:44.000000Z'
+                    links:
+                      self: 'http://localhost/api/v1/users/196'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                        example: user
+                      id:
+                        type: integer
+                        example: 196
+                      attributes:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                            example: 'Shanny Feil DVM'
+                          email:
+                            type: string
+                            example: mauricio99@example.net
+                          emailVerifiedAt:
+                            type: string
+                            example: '2024-06-21T09:51:44.000000Z'
+                          createdAt:
+                            type: string
+                            example: '2024-06-21T09:51:44.000000Z'
+                          updatedAt:
+                            type: string
+                            example: '2024-06-21T09:51:44.000000Z'
+                      links:
+                        type: object
+                        properties:
+                          self:
+                            type: string
+                            example: 'http://localhost/api/v1/users/196'
+      tags:
+        - 'User endpoints'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Users name. Must not be greater than 255 characters.'
+                  example: kqpswlbmiyldakdht
+              required:
+                - name
+    delete:
+      summary: 'Delete a user resource'
+      operationId: deleteAUserResource
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User endpoints'
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: 'Legal cases endpoints'
+    description: ''
+  -
+    name: 'User endpoints'
+    description: ''
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.'
+security:
+  -
+    default: []
