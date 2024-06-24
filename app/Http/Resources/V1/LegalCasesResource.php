@@ -22,6 +22,7 @@ class LegalCasesResource extends JsonResource
      * @responseField attributes.address string address of the legal case
      * @responseField attributes.metadata string metadata of the legal case
      * @responseField attributes.created_at string created_at of the legal case
+     * @responseField attributes.user string creator of the legal case
      * @responseField links.self string created_at of the legal case
      * @return array<string, mixed>
      */
@@ -45,6 +46,8 @@ class LegalCasesResource extends JsonResource
                 "metadata" => $this->metadata,
                 "created_at" => $this->created_at,
                 "updated_at" => $this->updated_at,
+                $this->mergeWhen($request->routeIs('cases.*'), [
+                    "user" => new UserResource($this->whenLoaded('user'))])
             ],
             'links' => [
                 'self' => route('cases.show', ['case' => $this->id])
